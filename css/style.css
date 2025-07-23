@@ -1,0 +1,207 @@
+css
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+<<<<<<< HEAD
+header {
+  background-color: #34ab76;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Example of basic responsive styles in css/style.css */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .section-img {
+        width: 80%;
+    }
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+=======
+figure.floated-image img {
+  max-width: 100%; /* Ensure the image doesn't overflow the figure */
+  height: auto;
+  display: block; /* To ensure proper stacking with figcaption */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccdad7;
+>>>>>>> a90ec6aa73f718ab02427ff28fb929657a68a807
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+<<<<<<< HEAD
+}
+
+/* Contact Form Styling */
+.contact-form-section {
+  max-width: 700px; /* About 60-70% of a typical page width */
+  margin: 20px auto; /* Centered horizontally */
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0 10px;
+  color: #555;
+}
+
+.contact-form p {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in element's total width */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.contact-form .form-buttons {
+  text-align: center;
+}
+
+.contact-form input[type="submit"],
+.contact-form input[type="reset"] {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0 10px;
+}
+
+.contact-form input[type="reset"] {
+  background-color: #f0ad4e;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+.contact-form input[type="reset"]:hover {
+  background-color: #ec971f;
+}
+
+/* Success Page Styling */
+.success-message-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success-message-section h2 {
+  color: #5cb85c;
+}
+
+/* Table Styling */
+.project-schedule-section {
+  max-width: 800px; /* About 50-60% of a typical page width */
+  margin: 40px auto; /* Centered horizontally */
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.project-schedule-table caption {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-schedule-table th,
+.project-schedule-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.project-schedule-table thead {
+  background-color: #f2f2f2;
+}
+
+.project-schedule-table th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.project-schedule-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.project-schedule-table tbody tr:hover {
+  background-color: #e9e9e9;
+=======
+>>>>>>> a90ec6aa73f718ab02427ff28fb929657a68a807
+}

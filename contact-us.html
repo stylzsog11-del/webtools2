@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Myron Richardson">
+  <meta name="description" content="Myron Richardson's journey into web development, including early passions, challenges, and growth.">
+  <meta name="generator" content="AI-assisted content">
+  <title>Contact Myron Richardson</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>My Journey into Web Development</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-form-section">
+      <h2>Contact Me</h2>
+      <form name="contact" method="get" action="success.html" class="contact-form">
+        <fieldset>
+          <legend>Your Information</legend>
+          <p>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+          </p>
+          <p>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="phone">Phone Number (optional):</label>
+            <input type="tel" id="phone" name="phone">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reason for Contact</legend>
+          <p>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+          </p>
+          <p>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred Contact Method</legend>
+          <p>
+            <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+            <label for="contactEmail">Email</label>
+          </p>
+          <p>
+            <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+            <label for="contactPhone">Phone</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Areas of Interest</legend>
+          <p>
+            <input type="checkbox" id="webDesign" name="interest" value="webDesign">
+            <label for="webDesign">Web Design</label>
+          </p>
+          <p>
+            <input type="checkbox" id="frontEnd" name="interest" value="frontEnd">
+            <label for="frontEnd">Front-end Development</label>
+          </p>
+          <p>
+            <input type="checkbox" id="backEnd" name="interest" value="backEnd">
+            <label for="backEnd">Back-end Development</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>How did you hear about me?</legend>
+          <p>
+            <label for="discovery">Source:</label>
+            <select id="discovery" name="discovery">
+              <option value="">--Please choose an option--</option>
+              <option value="searchEngine">Search Engine</option>
+              <option value="socialMedia">Social Media</option>
+              <option value="referral">Referral</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <p class="form-buttons">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </p>
+      </form>
+    </section>
+
+    <section class="project-schedule-section">
+      <h2>Project Schedule</h2>
+      <table class="project-schedule-table">
+        <caption>Upcoming Project Milestones</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project Phase</th>
+            <th scope="col">Task</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Phase 1</th>
+            <td>Initial Research & Planning</td>
+            <td>2025-08-01</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <th scope="row">Phase 1</th>
+            <td>Wireframing & Prototyping</td>
+            <td>2025-08-15</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <th scope="row">Phase 2</th>
+            <td>Front-end Development</td>
+            <td>2025-09-01</td>
+            <td>Not Started</td>
+          </tr>
+          <tr>
+            <th scope="row">Phase 2</th>
+            <td>Back-end Development</td>
+            <td>2025-09-15</td>
+            <td>Not Started</td>
+          </tr>
+          <tr>
+            <th scope="row">Phase 3</th>
+            <td>Testing & Debugging</td>
+            <td>2025-10-01</td>
+            <td>Not Started</td>
+          </tr>
+          <tr>
+            <th scope="row">Phase 3</th>
+            <td>Deployment</td>
+            <td>2025-10-15</td>
+            <td>Not Started</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Myron Richardson. All rights reserved.</p>
+  </footer>
+</body>
+</html>

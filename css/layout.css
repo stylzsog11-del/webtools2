@@ -1,0 +1,127 @@
+/* Box-sizing for all elements */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ccc;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  max-width: 100%; /* Ensures the image is responsive and scales down within its container. */
+  height: auto;
+  border-radius: 50%; /* Creates a circular profile image */
+  border: 3px solid #333;
+  margin-bottom: 15px;
+}
+
+/* Navigation styles */
+.main-nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.main-nav a:hover {
+  background-color: #555;
+}
+
+/* Main content area */
+.main-content {
+  max-width: 960px; /* Limits the content width for readability. */
+  margin: 20px auto; /* Centers the content block horizontally. */
+  padding: 0 20px;
+}
+
+/* Section styling */
+.content-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.content-section h2 {
+  color: #0056b3;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+/* Figure and image styles */
+figure {
+  margin: 0 0 15px 0; /* Adjust margin around figures */
+  padding: 0;
+}
+
+.responsive-image {
+  max-width: 100%; /* Ensures the image scales down within its container. */
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
+figcaption {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 5px;
+  text-align: center; /* Center the caption */
+}
+
+/* Float images and text wrapping */
+.float-left {
+  float: left; /* Floats the image to the left. */
+  margin-right: 20px; /* Provides space between the image and the text. */
+  width: 250px; /* Set a desired width for the floated image container. */
+}
+
+.float-right {
+  float: right; /* Floats the image to the right. */
+  margin-left: 20px; /* Provides space between the image and the text. */
+  width: 250px; /* Set a desired width for the floated image container. */
+}
+
+/* Clearfix for floats */
+.clear {
+  clear: both; /* Clears floats after each section to prevent layout issues. */
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: 30px;
+}
