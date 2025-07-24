@@ -9,7 +9,6 @@ body {
   color: #333;
 }
 
-<<<<<<< HEAD
 header {
   background-color: #34ab76;
   color: #fff;
@@ -37,27 +36,20 @@ main {
   padding: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-=======
 figure.floated-image img {
   max-width: 100%; /* Ensure the image doesn't overflow the figure */
   height: auto;
   display: block; /* To ensure proper stacking with figcaption */
-}
+ } 
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #ccdad7;
->>>>>>> a90ec6aa73f718ab02427ff28fb929657a68a807
+  background-color: #333;
   color: #fff;
   position: relative;
   bottom: 0;
   width: 100%;
-<<<<<<< HEAD
 }
 
 /* Contact Form Styling */
@@ -202,6 +194,47 @@ footer {
 
 .project-schedule-table tbody tr:hover {
   background-color: #e9e9e9;
-=======
->>>>>>> a90ec6aa73f718ab02427ff28fb929657a68a807
+}
+
+/* General Styling */ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #34ab76;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+/* Example of basic responsive styles in css/style.css */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .section-img {
+        width: 80%;
+    }
+}
+main {
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
