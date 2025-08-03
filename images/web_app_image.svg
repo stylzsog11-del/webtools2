@@ -1,0 +1,95 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dashboard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f3f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  
+  <!-- Laptop -->
+  <ellipse cx="400" cy="480" rx="250" ry="30" fill="#2c3e50" opacity="0.3"/>
+  <rect x="150" y="120" width="500" height="320" rx="15" fill="#2c3e50"/>
+  <rect x="170" y="140" width="460" height="280" rx="8" fill="url(#dashboard)"/>
+  
+  <!-- Laptop Bottom -->
+  <rect x="120" y="440" width="560" height="20" rx="10" fill="#2c3e50"/>
+  
+  <!-- Dashboard Interface -->
+  <!-- Sidebar -->
+  <rect x="180" y="150" width="80" height="260" fill="#667eea"/>
+  
+  <!-- Sidebar Items -->
+  <rect x="190" y="170" width="60" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="190" y="200" width="60" height="20" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="190" y="230" width="60" height="20" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="190" y="260" width="60" height="20" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="190" y="290" width="60" height="20" rx="3" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Main Content Area -->
+  <rect x="270" y="150" width="350" height="260" fill="#ffffff"/>
+  
+  <!-- Header Bar -->
+  <rect x="270" y="150" width="350" height="40" fill="#f8f9fa"/>
+  <rect x="280" y="160" width="120" height="20" fill="#667eea"/>
+  <circle cx="590" cy="170" r="8" fill="#28a745"/>
+  <circle cx="570" cy="170" r="8" fill="#ffc107"/>
+  
+  <!-- Charts/Widgets -->
+  <rect x="290" y="210" width="150" height="80" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <rect x="460" y="210" width="140" height="80" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  
+  <!-- Chart Lines -->
+  <polyline points="300,270 320,250 340,260 360,240 380,250 400,230 420,240" 
+            fill="none" stroke="#2196f3" stroke-width="2"/>
+  
+  <!-- Bar Chart -->
+  <rect x="470" y="260" width="15" height="20" fill="#9c27b0"/>
+  <rect x="490" y="250" width="15" height="30" fill="#9c27b0"/>
+  <rect x="510" y="240" width="15" height="40" fill="#9c27b0"/>
+  <rect x="530" y="255" width="15" height="25" fill="#9c27b0"/>
+  <rect x="550" y="245" width="15" height="35" fill="#9c27b0"/>
+  
+  <!-- Data Table -->
+  <rect x="290" y="310" width="310" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Table Headers -->
+  <rect x="300" y="320" width="80" height="15" fill="#f5f5f5"/>
+  <rect x="390" y="320" width="80" height="15" fill="#f5f5f5"/>
+  <rect x="480" y="320" width="80" height="15" fill="#f5f5f5"/>
+  <rect x="570" y="320" width="20" height="15" fill="#f5f5f5"/>
+  
+  <!-- Table Rows -->
+  <rect x="300" y="340" width="290" height="1" fill="#e0e0e0"/>
+  <rect x="300" y="355" width="290" height="1" fill="#e0e0e0"/>
+  <rect x="300" y="370" width="290" height="1" fill="#e0e0e0"/>
+  
+  <!-- Code Brackets -->
+  <g transform="translate(50, 200)">
+    <path d="M20,0 L0,20 L0,60 L20,80" fill="none" stroke="#667eea" stroke-width="4"/>
+    <path d="M40,0 L60,20 L60,60 L40,80" fill="none" stroke="#667eea" stroke-width="4"/>
+  </g>
+  
+  <g transform="translate(690, 200)">
+    <path d="M20,0 L0,20 L0,60 L20,80" fill="none" stroke="#667eea" stroke-width="4"/>
+    <path d="M40,0 L60,20 L60,60 L40,80" fill="none" stroke="#667eea" stroke-width="4"/>
+  </g>
+  
+  <!-- API Connection Lines -->
+  <circle cx="100" cy="300" r="15" fill="#28a745"/>
+  <text x="100" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">API</text>
+  <line x1="115" y1="300" x2="150" y2="300" stroke="#28a745" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <circle cx="700" cy="300" r="15" fill="#dc3545"/>
+  <text x="700" y="305" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">DB</text>
+  <line x1="650" y1="300" x2="685" y2="300" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Title Text -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">Web Applications</text>
+</svg>

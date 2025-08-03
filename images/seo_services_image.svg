@@ -1,0 +1,136 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  
+  <!-- Computer Screen -->
+  <rect x="200" y="100" width="400" height="300" rx="10" fill="#2c3e50"/>
+  <rect x="220" y="120" width="360" height="260" rx="5" fill="url(#screen5)"/>
+  
+  <!-- Stand -->
+  <rect x="370" y="400" width="60" height="50" fill="#2c3e50"/>
+  <rect x="340" y="450" width="120" height="15" rx="7" fill="#2c3e50"/>
+  
+  <!-- Google Search Interface -->
+  <rect x="230" y="130" width="340" height="40" fill="#ffffff"/>
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4285f4" text-anchor="middle">Google</text>
+  
+  <!-- Search Bar -->
+  <rect x="250" y="180" width="300" height="35" rx="17" fill="#ffffff" stroke="#dadce0" stroke-width="1"/>
+  <text x="260" y="200" font-family="Arial, sans-serif" font-size="12" fill="#5f6368">Richardson Web Development</text>
+  
+  <!-- Search Button -->
+  <rect x="340" y="230" width="120" height="30" rx="4" fill="#f8f9fa" stroke="#dadce0" stroke-width="1"/>
+  <text x="400" y="248" font-family="Arial, sans-serif" font-size="11" fill="#3c4043" text-anchor="middle">Google Search</text>
+  
+  <!-- Search Results -->
+  <rect x="240" y="280" width="320" height="90" fill="#ffffff"/>
+  
+  <!-- Result 1 -->
+  <text x="250" y="295" font-family="Arial, sans-serif" font-size="14" fill="#1a0dab" font-weight="500">Richardson Web Development - #1 Web Design</text>
+  <text x="250" y="310" font-family="Arial, sans-serif" font-size="11" fill="#006621">https://richardsonwebdev.com</text>
+  <text x="250" y="325" font-family="Arial, sans-serif" font-size="12" fill="#545454">Professional web design and development services...</text>
+  
+  <!-- Result 2 -->
+  <text x="250" y="345" font-family="Arial, sans-serif" font-size="14" fill="#1a0dab" font-weight="500">Top Web Developer Dallas - Richardson Web Dev</text>
+  <text x="250" y="360" font-family="Arial, sans-serif" font-size="11" fill="#006621">https://richardsonwebdev.com/about</text>
+  
+  <!-- SEO Elements Around Screen -->
+  
+  <!-- Magnifying Glass -->
+  <g transform="translate(100, 150)">
+    <circle cx="20" cy="20" r="15" fill="none" stroke="#667eea" stroke-width="4"/>
+    <line x1="31" y1="31" x2="45" y2="45" stroke="#667eea" stroke-width="4" stroke-linecap="round"/>
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="12" fill="#667eea" text-anchor="middle">SEO</text>
+  </g>
+  
+  <!-- Ranking Arrow -->
+  <g transform="translate(650, 200)">
+    <path d="M0,40 L20,0 L40,40 L30,40 L30,60 L10,60 L10,40 Z" fill="#22c55e"/>
+    <text x="20" y="80" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">#1</text>
+  </g>
+  
+  <!-- Keywords Cloud -->
+  <g transform="translate(80, 350)">
+    <rect x="0" y="0" width="80" height="20" rx="10" fill="#e3f2fd"/>
+    <text x="40" y="13" font-family="Arial, sans-serif" font-size="10" fill="#1976d2" text-anchor="middle">web design</text>
+    
+    <rect x="20" y="25" width="60" height="18" rx="9" fill="#f3e5f5"/>
+    <text x="50" y="36" font-family="Arial, sans-serif" font-size="9" fill="#7b1fa2" text-anchor="middle">Dallas</text>
+    
+    <rect x="10" y="48" width="70" height="18" rx="9" fill="#fff3e0"/>
+    <text x="45" y="59" font-family="Arial, sans-serif" font-size="9" fill="#f57c00" text-anchor="middle">responsive</text>
+  </g>
+  
+  <!-- Analytics Chart -->
+  <g transform="translate(620, 320)">
+    <rect x="0" y="0" width="120" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="60" y="15" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" text-anchor="middle">Traffic Growth</text>
+    
+    <!-- Chart Bars -->
+    <rect x="10" y="60" width="8" height="15" fill="#667eea"/>
+    <rect x="25" y="50" width="8" height="25" fill="#667eea"/>
+    <rect x="40" y="40" width="8" height="35" fill="#667eea"/>
+    <rect x="55" y="30" width="8" height="45" fill="#22c55e"/>
+    <rect x="70" y="25" width="8" height="50" fill="#22c55e"/>
+    <rect x="85" y="20" width="8" height="55" fill="#22c55e"/>
+    <rect x="100" y="15" width="8" height="60" fill="#22c55e"/>
+    
+    <!-- Trend Line -->
+    <polyline points="14,67 29,62 44,57 59,52 74,50 89,47 104,45" 
+              fill="none" stroke="#dc2626" stroke-width="2"/>
+  </g>
+  
+  <!-- Meta Tags -->
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="120" height="60" fill="#f8f9fa" stroke="#dadce0" stroke-width="1"/>
+    <text x="5" y="15" font-family="Monaco, monospace" font-size="8" fill="#d73a49">&lt;meta</text>
+    <text x="5" y="25" font-family="Monaco, monospace" font-size="8" fill="#005cc5">name="description"</text>
+    <text x="5" y="35" font-family="Monaco, monospace" font-size="8" fill="#032f62">content="Web design"</text>
+    <text x="5" y="45" font-family="Monaco, monospace" font-size="8" fill="#d73a49">/&gt;</text>
+  </g>
+  
+  <!-- Page Speed Indicator -->
+  <g transform="translate(680, 120)">
+    <circle cx="0" cy="0" r="25" fill="#22c55e" opacity="0.2"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#22c55e" stroke-width="3" 
+            stroke-dasharray="94" stroke-dashoffset="23" transform="rotate(-90)"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="12" fill="#22c55e" text-anchor="middle" font-weight="bold">95</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50" text-anchor="middle">Speed Score</text>
+  </g>
+  
+  <!-- Backlinks -->
+  <g transform="translate(120, 450)">
+    <circle cx="0" cy="0" r="8" fill="#3b82f6"/>
+    <circle cx="30" cy="0" r="8" fill="#3b82f6"/>
+    <circle cx="60" cy="0" r="8" fill="#3b82f6"/>
+    <circle cx="90" cy="0" r="8" fill="#3b82f6"/>
+    
+    <line x1="8" y1="0" x2="22" y2="0" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="38" y1="0" x2="52" y2="0" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="68" y1="0" x2="82" y2="0" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="45" y="20" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" text-anchor="middle">Quality Backlinks</text>
+  </g>
+  
+  <!-- Mobile Optimization -->
+  <g transform="translate(620, 450)">
+    <rect x="0" y="0" width="25" height="40" rx="5" fill="#2c3e50"/>
+    <rect x="3" y="5" width="19" height="25" rx="2" fill="#22c55e"/>
+    <circle cx="12.5" cy="35" r="2" fill="#22c55e"/>
+    <text x="30" y="20" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Mobile Ready</text>
+  </g>
+  
+  <!-- Title Text -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">SEO Optimization</text>
+</svg>

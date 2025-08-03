@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Myron Richardson" />
+  <meta name="description"
+    content="Meet our talented team of web developers and designers bringing innovation to digital solutions." />
+  <title>Our Team - Myron Richardson Web Development</title>
+  <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Base styles and theme */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --card-bg: #f0f0f0;
+      --accent: #4CAF50;
+      --modal-bg: rgba(0, 0, 0, 0.6);
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eeeeee;
+      --card-bg: #1e1e1e;
+      --modal-bg: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header .logo img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+    }
+
+    /* ----------------------------
+       Part II: Updated Navigation
+    ----------------------------- */
+    nav.topnav {
+      background: var(--card-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav.topnav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+
+    nav.topnav a:hover {
+      color: var(--accent);
+    }
+
+    /* ----------------------------
+       Team & Page Sections
+    ----------------------------- */
+    .main-content {
+      padding: 2rem;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .team-member {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 260px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .team-member figcaption {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .bio {
+      font-size: 0.9rem;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .team-values {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    /* ----------------------------
+       Part III: Footer Flex Layout
+    ----------------------------- */
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer-column ul,
+    .footer-column p {
+      margin: 0.5rem 0;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: var(--modal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: var(--bg-color);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Meet Our Team<br>Richardson Web Development</h1>
+    <div class="logo">
+      <img src="images/favicon-96x96.png" alt="Myron Richardson's favicon">
+    </div>
+    <p class="header-description">Our diverse team of professionals brings together creativity, technical expertise, and
+      passion for innovation.</p>
+  </header>
+  <nav class="topnav">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="team.html">Team</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="success.html">Success</a>
+    </div>
+    <div class="nav-right">
+      <a href="signin.html">Sign In</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="team-intro">
+      <h2>Building Digital Excellence Together</h2>
+      <p>Our collaborative approach combines technical expertise with creative vision.</p>
+    </section>
+
+    <section class="team">
+      <div class="team-container">
+        <!-- Team Member Cards -->
+        <div class="team-member" onclick="openModal('Myron Richardson', 'CEO & Lead Developer', 'Myron is the visionary founder...')">
+          <figure>
+            <img src="images/20250125_225822.jpg" alt="Myron Richardson">
+            <figcaption>Myron Richardson</figcaption>
+          </figure>
+          <p class="bio">CEO & Lead Developer</p>
+          <p>Myron is the visionary founder and lead developer, driving innovation and excellence in every project.</p>
+          <div class="social-icons"><a href="#">💼</a></div>
+        </div>
+
+        <div class="team-member" onclick="openModal('Keith O\'brain', 'UI/UX Designer', 'Keith is our talented UI/UX designer...')">
+          <figure>
+            <img src="images/1000004822 (1).jpg" alt="Keith O'brain">
+            <figcaption>Keith O'brain</figcaption>
+          </figure>
+          <p class="bio">UI/UX Designer</p>
+          <p>Keith specializes in creating intuitive user experiences and stunning visual designs.</p>
+          <div class="social-icons"><a href="#">🎨</a></div>
+        </div>
+
+        <div class="team-member" onclick="openModal('Ryan O\'neal', 'Backend Developer', 'Ryan specializes in backend development...')">
+          <figure>
+            <img src="images/1000004835.jpg" alt="Ryan O'neal">
+            <figcaption>Larry Moore</figcaption>
+          </figure>
+          <p class="bio">Backend Developer</p>
+          <p>Larry specializes in backend development, ensuring robust and scalable server-side solutions.</p>
+          <div class="social-icons"><a href="#">⚙️</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-values">
+      <h2>Our Collaborative Approach</h2>
+      <p>Just as Myron learned the value of teamwork through sports, our entire team operates with the same principles.
+      </p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>External Links</h3>
+      <ul>
+        <li><a href="https://www.dallascollege.edu/" target="_blank">Dallas College</a></li>
+        <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
+        <li><a href="https://www.microsoft.com/ai" target="_blank">Microsoft AI</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column center">
+      <p>&copy; <span id="year"></span> Myron Richardson</p>
+      <p><a href="mailto:e1436803@dallascollege.edu">Email Webmaster</a></p>
+    </div>
+
+    <div class="footer-column footer-nav">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="success.html">Success</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

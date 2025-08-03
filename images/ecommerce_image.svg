@@ -1,0 +1,60 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  
+  <!-- Computer Monitor -->
+  <rect x="150" y="80" width="500" height="320" rx="15" fill="#2c3e50"/>
+  <rect x="170" y="100" width="460" height="280" rx="8" fill="url(#screen)"/>
+  
+  <!-- Monitor Stand -->
+  <rect x="360" y="400" width="80" height="60" fill="#2c3e50"/>
+  <rect x="320" y="460" width="160" height="20" rx="10" fill="#2c3e50"/>
+  
+  <!-- Shopping Cart Icon -->
+  <g transform="translate(300, 180)">
+    <rect x="0" y="30" width="60" height="40" rx="5" fill="none" stroke="#667eea" stroke-width="3"/>
+    <circle cx="15" cy="85" r="8" fill="#667eea"/>
+    <circle cx="45" cy="85" r="8" fill="#667eea"/>
+    <polyline points="0,30 10,10 70,10" fill="none" stroke="#667eea" stroke-width="3"/>
+    <rect x="15" y="35" width="8" height="8" fill="#667eea"/>
+    <rect x="30" y="35" width="8" height="8" fill="#667eea"/>
+    <rect x="45" y="35" width="8" height="8" fill="#667eea"/>
+  </g>
+  
+  <!-- Product Cards -->
+  <rect x="500" y="140" width="80" height="60" rx="5" fill="white" opacity="0.9"/>
+  <rect x="500" y="220" width="80" height="60" rx="5" fill="white" opacity="0.9"/>
+  <rect x="500" y="300" width="80" height="60" rx="5" fill="white" opacity="0.9"/>
+  
+  <!-- Price Tags -->
+  <text x="520" y="160" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">$29.99</text>
+  <text x="520" y="240" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">$45.50</text>
+  <text x="520" y="320" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">$19.99</text>
+  
+  <!-- Credit Card -->
+  <rect x="200" y="320" width="80" height="50" rx="8" fill="#28a745"/>
+  <rect x="205" y="325" width="70" height="8" fill="#ffffff" opacity="0.8"/>
+  <rect x="205" y="340" width="30" height="4" fill="#ffffff" opacity="0.6"/>
+  <rect x="205" y="350" width="40" height="4" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Security Shield -->
+  <g transform="translate(350, 320)">
+    <path d="M20,0 L30,10 L20,40 L10,10 Z" fill="#ffc107" stroke="#fff" stroke-width="2"/>
+    <path d="M20,8 L26,14 L20,32 L14,14 Z" fill="#fff"/>
+    <circle cx="20" cy="20" r="3" fill="#ffc107"/>
+  </g>
+  
+  <!-- Title Text -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">E-commerce Platform</text>
+</svg>

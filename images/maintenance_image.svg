@@ -1,0 +1,112 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#28a745;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#28a745;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  
+  <!-- Monitor -->
+  <rect x="200" y="150" width="400" height="250" rx="10" fill="#2c3e50"/>
+  <rect x="220" y="170" width="360" height="210" rx="5" fill="#1a1a1a"/>
+  
+  <!-- Monitor Stand -->
+  <rect x="370" y="400" width="60" height="40" fill="#2c3e50"/>
+  <rect x="340" y="440" width="120" height="15" rx="7" fill="#2c3e50"/>
+  
+  <!-- Screen Content -->
+  <rect x="230" y="180" width="340" height="190" fill="#0d1117"/>
+  
+  <!-- Terminal Window -->
+  <rect x="240" y="190" width="320" height="170" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  
+  <!-- Terminal Header -->
+  <rect x="240" y="190" width="320" height="25" fill="#21262d"/>
+  <circle cx="255" cy="202" r="4" fill="#ff5f56"/>
+  <circle cx="270" cy="202" r="4" fill="#ffbd2e"/>
+  <circle cx="285" cy="202" r="4" fill="#27ca3f"/>
+  
+  <!-- Terminal Text Lines -->
+  <text x="250" y="235" font-family="Monaco, monospace" font-size="10" fill="#58a6ff">$ npm run build</text>
+  <text x="250" y="250" font-family="Monaco, monospace" font-size="9" fill="#7c3aed">✓ Building for production...</text>
+  <text x="250" y="265" font-family="Monaco, monospace" font-size="9" fill="#22c55e">✓ Dependencies updated</text>
+  <text x="250" y="280" font-family="Monaco, monospace" font-size="9" fill="#22c55e">✓ Security patches applied</text>
+  <text x="250" y="295" font-family="Monaco, monospace" font-size="9" fill="#22c55e">✓ Database backup completed</text>
+  <text x="250" y="310" font-family="Monaco, monospace" font-size="9" fill="#f59e0b">⚠ Optimizing images...</text>
+  <text x="250" y="325" font-family="Monaco, monospace" font-size="9" fill="#58a6ff">→ Running tests...</text>
+  <text x="250" y="340" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$ _</text>
+  
+  <!-- Tools Around Monitor -->
+  <!-- Wrench -->
+  <g transform="translate(120, 200) rotate(45)">
+    <rect x="0" y="15" width="40" height="8" rx="4" fill="#6b7280"/>
+    <rect x="35" y="10" width="15" height="18" rx="2" fill="#6b7280"/>
+    <rect x="45" y="5" width="5" height="28" rx="2" fill="#6b7280"/>
+  </g>
+  
+  <!-- Screwdriver -->
+  <g transform="translate(680, 180) rotate(-30)">
+    <rect x="0" y="12" width="50" height="4" rx="2" fill="#dc2626"/>
+    <rect x="45" y="8" width="20" height="12" rx="2" fill="#374151"/>
+  </g>
+  
+  <!-- Gear/Cog -->
+  <g transform="translate(150, 350)">
+    <circle cx="25" cy="25" r="20" fill="#6b7280"/>
+    <circle cx="25" cy="25" r="12" fill="none" stroke="#ffecd2" stroke-width="8"/>
+    <circle cx="25" cy="25" r="6" fill="#ffecd2"/>
+    <!-- Gear teeth -->
+    <rect x="23" y="0" width="4" height="8" fill="#6b7280"/>
+    <rect x="23" y="42" width="4" height="8" fill="#6b7280"/>
+    <rect x="0" y="23" width="8" height="4" fill="#6b7280"/>
+    <rect x="42" y="23" width="8" height="4" fill="#6b7280"/>
+  </g>
+  
+  <!-- Progress Bars -->
+  <g transform="translate(600, 300)">
+    <rect x="0" y="0" width="120" height="8" rx="4" fill="#374151"/>
+    <rect x="0" y="0" width="90" height="8" rx="4" fill="#22c55e"/>
+    <text x="125" y="7" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">75%</text>
+    
+    <rect x="0" y="20" width="120" height="8" rx="4" fill="#374151"/>
+    <rect x="0" y="20" width="108" height="8" rx="4" fill="#3b82f6"/>
+    <text x="125" y="27" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">90%</text>
+    
+    <rect x="0" y="40" width="120" height="8" rx="4" fill="#374151"/>
+    <rect x="0" y="40" width="72" height="8" rx="4" fill="#f59e0b"/>
+    <text x="125" y="47" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">60%</text>
+  </g>
+  
+  <!-- Shield (Security) -->
+  <g transform="translate(650, 350)">
+    <path d="M25,5 L35,15 L25,50 L15,15 Z" fill="#22c55e" stroke="#1f2937" stroke-width="2"/>
+    <path d="M25,12 L30,17 L25,40 L20,17 Z" fill="#dcfce7"/>
+    <circle cx="25" cy="25" r="4" fill="#22c55e"/>
+    <polyline points="22,25 24,27 28,23" fill="none" stroke="#dcfce7" stroke-width="2"/>
+  </g>
+  
+  <!-- Status Indicators -->
+  <g transform="translate(80, 320)">
+    <circle cx="0" cy="0" r="8" fill="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#22c55e"/>
+    <text x="15" y="4" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">System Online</text>
+    
+    <circle cx="0" cy="30" r="8" fill="rgba(34, 197, 94, 0.3)"/>
+    <circle cx="0" cy="30" r="4" fill="#22c55e"/>
+    <text x="15" y="34" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Backups Current</text>
+    
+    <circle cx="0" cy="60" r="8" fill="rgba(34, 197, 94, 0.3)"/>
+    <circle cx="0" cy="60" r="4" fill="#22c55e"/>
+    <text x="15" y="64" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Security Updated</text>
+  </g>
+  
+  <!-- Title Text -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">Website Maintenance</text>
+</svg>
