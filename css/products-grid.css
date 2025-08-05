@@ -402,3 +402,9 @@
         max-height: 200px;
     }
 }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* ... rest of products grid code from artifact */
+}

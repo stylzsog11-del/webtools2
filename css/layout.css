@@ -292,5 +292,15 @@ nav {
     }
 }
 
+.page-container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    /* ... rest of page layout code from artifact */
+}
+
 
 
