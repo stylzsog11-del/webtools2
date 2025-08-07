@@ -1,47 +1,43 @@
 // Theme Toggle Feature Implementation
 // This code handles switching between light and dark themes
 
-// Function to get theme from localStorage or default to 'light'
-function getStoredTheme() {
-    return localStorage.getItem('theme') || 'light';
+// Theme toggle logic for all pages
+
+const body = document.body;
+const toggleContainer = document.getElementById('theme-toggle-container');
+const toggleIcon = document.getElementById('theme-toggle-icon');
+
+// Set theme based on saved preference or system preference
+function setTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark');
+    toggleIcon.textContent = '🌙';
+  } else {
+    body.classList.remove('dark');
+    toggleIcon.textContent = '🌞';
+  }
 }
 
-// Function to apply theme to the body element
-function applyTheme(theme) {
-    document.body.className = theme + '-theme';
+// Get saved theme or system preference
+function getPreferredTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved) return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-// Function to save theme to localStorage
-function saveTheme(theme) {
-    localStorage.setItem('theme', theme);
-}
-
-// Function to toggle between light and dark themes
+// Toggle theme and save preference
 function toggleTheme() {
-    const currentTheme = getStoredTheme();
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    // Apply the new theme
-    applyTheme(newTheme);
-    
-    // Save the new theme to localStorage
-    saveTheme(newTheme);
+  const isDark = body.classList.contains('dark');
+  setTheme(isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
 }
 
-// Initialize theme when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the stored theme preference
-    const storedTheme = getStoredTheme();
-    
-    // Apply the theme to the body
-    applyTheme(storedTheme);
-    
-    // Add click event listener to theme toggle button
-    const themeToggleContainer = document.getElementById('theme-toggle-container');
-    
-    if (themeToggleContainer) {
-        themeToggleContainer.addEventListener('click', toggleTheme);
-    }
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+  setTheme(getPreferredTheme());
+  if (toggleContainer) {
+    toggleContainer.addEventListener('click', toggleTheme);
+  }
 });
 
 // Alternative approach using arrow functions (more modern):
