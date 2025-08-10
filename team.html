@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Myron Richardson">
   <meta name="description"
-    content="Meet our talented team of web developers and designers bringing innovation to digital solutions.">
+    content="Meet our talented team of web developers and designers bringing innovation to digital solutions. This page includes content assisted by AI tools.">
   <title>Our Team - Myron Richardson Web Development</title>
   <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
@@ -220,6 +220,10 @@
 </head>
 
 <body>
+  <!-- Theme Toggle Button -->
+<div id="theme-toggle-container" style="position: fixed; top: 5rem; right: 1rem; z-index: 1000; cursor: pointer; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+  <span id="theme-toggle-icon" title="Toggle theme" style="font-size: 1.5rem;">🌓</span>
+</div>
   <header>
     <h1>Meet Our Team<br>Richardson Web Development</h1>
     <div class="logo">
@@ -273,7 +277,7 @@
 
         <div class="team-member" onclick="openModal('Ryan O\'neal', 'Backend Developer', 'Ryan specializes in backend development...')">
           <figure>
-            <img src="images/1000004835.jpg" alt="Ryan O'neal">
+            <img src="images/1000004835.jpg" alt="Larry Moore">
             <figcaption>Larry Moore</figcaption>
           </figure>
           <p class="bio">Backend Developer</p>
@@ -321,5 +325,6 @@
     // Set current year dynamically
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="theme-toggle.js"></script>
 </body>
 </html>

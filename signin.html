@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page includes content assisted by AI tools.">
     <title>Sign In - Your Site Name</title>
     <style>
         body {
@@ -62,6 +63,10 @@
     </style>
 </head>
 <body>
+  <!-- Theme Toggle Button -->
+  <div id="theme-toggle-container" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; cursor: pointer; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+    <span id="theme-toggle-icon" title="Toggle theme" style="font-size: 1.5rem;">🌓</span>
+  </div>
     <div class="signin-container">
         <h2>Sign In</h2>
         <form>
@@ -80,5 +85,6 @@
             <a href="team.html">← Back to Team</a>
         </div>
     </div>
+  <script src="theme-toggle.js"></script>
 </body>
 </html>
