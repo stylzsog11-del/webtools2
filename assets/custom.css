@@ -1,0 +1,6 @@
+/* Custom styles for Portfolio Website - W3.CSS Enhanced */
+
+/* Example: Gradient background for hero section */
+.hero-gradient {
+  background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+}
