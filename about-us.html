@@ -9,139 +9,144 @@
   <title>About - Myron Richardson</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
+<body class="w3-light-grey">
   <!-- Theme Toggle Button -->
   <div id="theme-toggle-container" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; cursor: pointer; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
     <span id="theme-toggle-icon" title="Toggle theme" style="font-size: 1.5rem;">🌓</span>
   </div>
 
-  <header class="header">
-    <h1>Welcome to My About Page</h1>
-     <!-- Logo positioned absolutely -->
-  <div class="logo">
-    <img src="images/favicon-96x96.png" alt="Myron Richardson's favicon">
-  </div>
+  <!-- Header -->
+  <header class="w3-container w3-green w3-center w3-padding-32">
+    <h1 class="w3-xxlarge">Welcome to My About Page</h1>
+    <div class="logo">
+      <img src="images/favicon-96x96.png" alt="Myron Richardson's favicon" style="width:80px;">
+    </div>
   </header>
 
-  <nav class="topnav">
-   <a class="active" href="index.html">Home</a>
-   <a class="active" href="contact-us.html">Contact</a>
-    <a class="active" href="about-us.html">About</a>
-    <a class="active" href="products.html">Products</a>
-    <a class="active" href="team.html">Team</a>    
+  <!-- Navigation -->
+  <nav class="w3-bar w3-blue w3-card w3-padding-small w3-center">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="contact-us.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="about-us.html" class="w3-bar-item w3-button w3-black" aria-current="page">About</a>
+    <a href="products.html" class="w3-bar-item w3-button">Products</a>
+    <a href="team.html" class="w3-bar-item w3-button">Team</a>
   </nav>
 
-  <aside class="toc-aside">
-    <h3>Table of Contents</h3>
-      <ul>
-        <li><a href="#my-story">My Story</a></li>
-        <li><a href="#values-goals">Values and Goals</a></li>
-        <li><a href="#what-drives-me">What Drives Me</a></li>
-      </ul>
-  </aside>
+  <!-- Main Layout: Sidebar + Main Content -->
+  <div class="w3-content w3-margin-top" style="max-width:1200px;">
+    <div class="w3-row-padding">
+      <!-- Sidebar / Table of Contents -->
+      <aside class="w3-third w3-card w3-light-grey w3-padding-16 w3-margin-bottom">
+        <div class="w3-container">
+          <h3 class="w3-text-blue">Table of Contents</h3>
+          <ul class="w3-ul">
+            <li><a href="#my-story">My Story</a></li>
+            <li><a href="#values-goals">Values and Goals</a></li>
+            <li><a href="#what-drives-me">What Drives Me</a></li>
+          </ul>
+        </div>
+      </aside>
 
-  <main>
-    <section class="intro-section">
-      <h2>About Me</h2>
-      <p>This section provides more information about Myron Richardson and the inspiration behind the web development journey.</p>
-    </section>
+      <!-- Main Content -->
+      <main class="w3-twothird w3-card w3-white w3-padding-32">
+        <section class="intro-section w3-container">
+          <h2 class="w3-text-green">About Me</h2>
+          <p>This section provides more information about Myron Richardson and the inspiration behind the web development journey.</p>
+        </section>
 
-    <section id="my-story">
-      <h2>My Story</h2>
-      <figure class="float-right">
-        <a href="images/early-passions-full.jpg" target="_blank">
-          <img 
-            src="images/early-passions-thumb.jpg" 
-            alt="Myron Richardson's personal journey" 
-            class="section-img"
-          >
-        </a>
-        <figcaption>The journey that shaped who I am today</figcaption>
-      </figure>
-      
-      <p>
-        Expanding on the journey shared on the home page, my path to web development has been shaped by pivotal moments that transformed curiosity into passion. One defining milestone was the first time I successfully took apart an old black and white TV at age nine because my mom didn't have moneys to buy a new one so I tried to fix it. The satisfaction of understanding how each component worked together sparked a lifelong fascination with systems and structure that now drives my approach to coding architecture.
-      </p>
-      
-      <p>
-        During high school, while balancing four sports, I discovered that the same mental discipline required to perfect a free throw or execute a precise play could be applied to mastering complex concepts. The countless hours spent on running plays over and over again taught me to break down problems into manageable components, a skill that proves invaluable when debugging code or planning website functionality.
-      </p>
-      
-      <p>
-        A particularly transformative experience came during my senior year when I was invited to join a rap group. Combining my drawing skills with music technology's opened my eyes to the intersection of creativity in music and digital innovation. This project became the bridge between my artistic background and my future in web development, showing me how visual design and technical implementation could work harmoniously together.
-      </p>
-      
-      <p>
-        The decision to pursue web development in college wasn't just about career prospects; it was about finding a field that honored all aspects of my background. Web development allows me to channel the analytical thinking from mechanical exploration, the creative expression from drawing, the collaborative spirit from team sports, and the problem-solving persistence that has defined my approach to every challenge I've encountered.
-      </p>
-    </section>
+        <section id="my-story" class="w3-container w3-margin-top">
+          <h2 class="w3-text-blue">My Story</h2>
+          <figure class="w3-right w3-margin-left w3-margin-bottom">
+            <a href="images/early-passions-full.jpg" target="_blank">
+              <img 
+                src="images/early-passions-thumb.jpg" 
+                alt="Myron Richardson's personal journey" 
+                class="w3-image w3-card"
+                style="max-width:200px;"
+              >
+            </a>
+            <figcaption class="w3-small">The journey that shaped who I am today</figcaption>
+          </figure>
+          <p>
+            Expanding on the journey shared on the home page, my path to web development has been shaped by pivotal moments that transformed curiosity into passion. One defining milestone was the first time I successfully took apart an old black and white TV at age nine because my mom didn't have moneys to buy a new one so I tried to fix it. The satisfaction of understanding how each component worked together sparked a lifelong fascination with systems and structure that now drives my approach to coding architecture.
+          </p>
+          <p>
+            During high school, while balancing four sports, I discovered that the same mental discipline required to perfect a free throw or execute a precise play could be applied to mastering complex concepts. The countless hours spent on running plays over and over again taught me to break down problems into manageable components, a skill that proves invaluable when debugging code or planning website functionality.
+          </p>
+          <p>
+            A particularly transformative experience came during my senior year when I was invited to join a rap group. Combining my drawing skills with music technology's opened my eyes to the intersection of creativity in music and digital innovation. This project became the bridge between my artistic background and my future in web development, showing me how visual design and technical implementation could work harmoniously together.
+          </p>
+          <p>
+            The decision to pursue web development in college wasn't just about career prospects; it was about finding a field that honored all aspects of my background. Web development allows me to channel the analytical thinking from mechanical exploration, the creative expression from drawing, the collaborative spirit from team sports, and the problem-solving persistence that has defined my approach to every challenge I've encountered.
+          </p>
+        </section>
 
-    <section id="values-goals">
-      <h2>Values and Goals</h2>
-      <figure class="float-left">
-        <a href="images/challenges-growth-full.jpg" target="_blank">
-          <img 
-            src="images/challenges-growth-thumb.jpg" 
-            alt="Core values and aspirations in web development" 
-            class="section-img"
-          >
-        </a>
-        <figcaption>Building with purpose and accessibility in mind</figcaption>
-      </figure>
-      
-      <p>
-        My core values in web development center around creating meaningful, accessible experiences for all users. Having learned the importance of teamwork through sports, I believe that websites should work for everyone, regardless of their abilities or the devices they use. This commitment to accessibility isn't just about following guidelines; it's about ensuring that the digital spaces I create welcome and serve every visitor.
-      </p>
-      
-      <p>
-        User-centric design drives every decision I make in development. Just as I learned to pay attention to detail in my drawings, I focus on understanding the needs, frustrations, and goals of the people who will interact with the websites I build. This means conducting thorough research, testing with real users, and continuously iterating based on feedback rather than assumptions.
-      </p>
-      
-      <p>
-        My passion for learning new technologies stems from the same curiosity that once drove me to dismantle radios and televisions. The web development landscape evolves rapidly, and I embrace this constant change as an opportunity for growth. Whether it's mastering a new JavaScript framework, exploring emerging CSS techniques, or understanding the latest accessibility standards, I approach each learning opportunity with the same enthusiasm I once brought to understanding mechanical systems.
-      </p>
-      
-      <p>
-        Collaboration and communication remain central to my approach, reflecting lessons learned on sports teams. I believe the best websites emerge from diverse perspectives working together, whether that's collaborating with designers, coordinating with back-end developers, or gathering insights from content creators and stakeholders. Clear communication and mutual respect create the foundation for exceptional digital experiences.
-      </p>
-    </section>
+        <section id="values-goals" class="w3-container w3-margin-top">
+          <h2 class="w3-text-green">Values and Goals</h2>
+          <figure class="w3-left w3-margin-right w3-margin-bottom">
+            <a href="images/challenges-growth-full.jpg" target="_blank">
+              <img 
+                src="images/challenges-growth-thumb.jpg" 
+                alt="Core values and aspirations in web development" 
+                class="w3-image w3-card"
+                style="max-width:200px;"
+              >
+            </a>
+            <figcaption class="w3-small">Building with purpose and accessibility in mind</figcaption>
+          </figure>
+          <p>
+            My core values in web development center around creating meaningful, accessible experiences for all users. Having learned the importance of teamwork through sports, I believe that websites should work for everyone, regardless of their abilities or the devices they use. This commitment to accessibility isn't just about following guidelines; it's about ensuring that the digital spaces I create welcome and serve every visitor.
+          </p>
+          <p>
+            User-centric design drives every decision I make in development. Just as I learned to pay attention to detail in my drawings, I focus on understanding the needs, frustrations, and goals of the people who will interact with the websites I build. This means conducting thorough research, testing with real users, and continuously iterating based on feedback rather than assumptions.
+          </p>
+          <p>
+            My passion for learning new technologies stems from the same curiosity that once drove me to dismantle radios and televisions. The web development landscape evolves rapidly, and I embrace this constant change as an opportunity for growth. Whether it's mastering a new JavaScript framework, exploring emerging CSS techniques, or understanding the latest accessibility standards, I approach each learning opportunity with the same enthusiasm I once brought to understanding mechanical systems.
+          </p>
+          <p>
+            Collaboration and communication remain central to my approach, reflecting lessons learned on sports teams. I believe the best websites emerge from diverse perspectives working together, whether that's collaborating with designers, coordinating with back-end developers, or gathering insights from content creators and stakeholders. Clear communication and mutual respect create the foundation for exceptional digital experiences.
+          </p>
+        </section>
 
-    <section id="what-drives-me">
-      <h2>What Drives Me</h2>
-      <figure class="float-right">
-        <a href="images/web-journey-full.jpg" target="_blank">
-          <img 
-            src="images/web-journey-thumb.jpg" 
-            alt="Passion for web development and continuous learning" 
-            class="section-img"
-          >
-        </a>
-        <figcaption>The drive to create and innovate</figcaption>
-      </figure>
-      
-      <p>
-        What truly drives me in web development is the opportunity to solve real problems for real people. Every website I build has the potential to make someone's day easier, help a business connect with its audience, or provide access to information that can change lives. This sense of purpose transforms coding from a technical exercise into a meaningful contribution to the digital world.
-      </p>
-      
-      <p>
-        The creative problem-solving aspect of web development resonates deeply with my background in both art and mechanical exploration. Each project presents unique challenges that require innovative solutions, whether it's optimizing performance for mobile users, creating intuitive navigation for complex content, or finding elegant ways to present data visually. The satisfaction of crafting clean, efficient code that produces beautiful, functional results mirrors the joy I once felt completing a detailed drawing or successfully reassembling a complex device.
-      </p>
-      
-      <p>
-        I'm particularly motivated by the democratizing power of the web. Unlike traditional media or physical products that require significant resources to distribute, a well-built website can reach audiences worldwide, providing equal access to information, services, and opportunities. This responsibility to create inclusive, accessible digital experiences drives me to continuously improve my skills and stay current with best practices.
-      </p>
-      
-      <p>
-        Looking ahead, my goal is to contribute to web development projects that prioritize sustainability, accessibility, and user empowerment. I want to be part of creating a more inclusive digital landscape where technology serves humanity's best interests, where beautiful design meets functional excellence, and where every user feels valued and understood through thoughtful, purposeful web experiences.
-      </p>
-    </section>
-  </main>
-<footer>
-            <div class="footer-column footer-center">
-                <p>&copy; 2025 Myron Richardson.</p>
-                <p><strong>Disclaimer:</strong> This content is for informational purposes only.</p>
-                <p>All rights reserved</p>
-            </div>
-    </footer>
+        <section id="what-drives-me" class="w3-container w3-margin-top">
+          <h2 class="w3-text-blue">What Drives Me</h2>
+          <figure class="w3-right w3-margin-left w3-margin-bottom">
+            <a href="images/web-journey-full.jpg" target="_blank">
+              <img 
+                src="images/web-journey-thumb.jpg" 
+                alt="Passion for web development and continuous learning" 
+                class="w3-image w3-card"
+                style="max-width:200px;"
+              >
+            </a>
+            <figcaption class="w3-small">The drive to create and innovate</figcaption>
+          </figure>
+          <p>
+            What truly drives me in web development is the opportunity to solve real problems for real people. Every website I build has the potential to make someone's day easier, help a business connect with its audience, or provide access to information that can change lives. This sense of purpose transforms coding from a technical exercise into a meaningful contribution to the digital world.
+          </p>
+          <p>
+            The creative problem-solving aspect of web development resonates deeply with my background in both art and mechanical exploration. Each project presents unique challenges that require innovative solutions, whether it's optimizing performance for mobile users, creating intuitive navigation for complex content, or finding elegant ways to present data visually. The satisfaction of crafting clean, efficient code that produces beautiful, functional results mirrors the joy I once felt completing a detailed drawing or successfully reassembling a complex device.
+          </p>
+          <p>
+            I'm particularly motivated by the democratizing power of the web. Unlike traditional media or physical products that require significant resources to distribute, a well-built website can reach audiences worldwide, providing equal access to information, services, and opportunities. This responsibility to create inclusive, accessible digital experiences drives me to continuously improve my skills and stay current with best practices.
+          </p>
+          <p>
+            Looking ahead, my goal is to contribute to web development projects that prioritize sustainability, accessibility, and user empowerment. I want to be part of creating a more inclusive digital landscape where technology serves humanity's best interests, where beautiful design meets functional excellence, and where every user feels valued and understood through thoughtful, purposeful web experiences.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-black w3-center w3-padding-32">
+    <div>
+      <p>&copy; 2025 Myron Richardson.</p>
+      <p><strong>Disclaimer:</strong> This content is for informational purposes only.</p>
+      <p>All rights reserved</p>
+    </div>
+  </footer>
   <script src="theme-toggle.js"></script>
+</body>
