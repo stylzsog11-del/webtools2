@@ -57,9 +57,12 @@ Using W3.CSS made it much easier to apply consistent, responsive styles without 
 
 AI tools were used to research W3.CSS components and debug code. All AI-assisted content was reviewed and rewritten in my own words.
 
-### Validation
+## Validation and Accessibility
 
-- HTML and CSS pass W3C validation.
+- All HTML files pass the [W3C HTML Validator](https://validator.w3.org/).
+- All CSS files pass the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+- All pages checked with [WAVE Accessibility Tool](https://wave.webaim.org/) and errors fixed.
+- Site tested on Chrome, Firefox, Edge, and mobile device emulators for responsive layout and navigation.
 
 ### Deployment
 
