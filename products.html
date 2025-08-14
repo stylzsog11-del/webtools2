@@ -4,247 +4,343 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Myron Richardson">
-    <meta name="description" content="This page includes content assisted by AI tools.">
+    <meta name="description" content="Our Digital Solutions - Richardson Web Development. Crafting exceptional web experiences for modern businesses.">
     <title>Our Products - Richardson Web Development</title>
     <!-- W3.CSS and Font Awesome -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/products-grid.css">
     <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
     <style>
-      /* Only custom tweaks, most styling now via W3.CSS */
+      body {
+        background: #f5f5f5;
+        margin: 0;
+      }
+      .header-main {
+        background: #43a047;
+        color: #fff;
+        text-align: center;
+        padding: 48px 0 24px 0;
+      }
       .header-logo {
         background: #fff;
         border-radius: 50%;
-        padding: 0.5rem;
-        margin: 1rem 0;
-      }
-      .product-image img {
-        width: 100%;
-        max-width: 120px;
-        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        margin: 24px auto 12px auto;
         display: block;
+      }
+      .header-main h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      .header-main p {
+        font-size: 1.3em;
+        margin-top: 12px;
+      }
+      .nav-main {
+        background: #26334a;
+        color: #fff;
+        text-align: center;
+        font-size: 1.1em;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-main a {
+        color: #fff !important;
+        text-decoration: none;
+        display: inline-block;
+        padding: 16px 32px;
+        transition: background 0.2s;
+        font-weight: 500;
+      }
+      .nav-main a:hover {
+        background: #1a2233;
+      }
+      .nav-main .active, .nav-main .w3-black {
+        background: #37517e !important;
+        border-radius: 6px;
+        font-weight: bold;
+      }
+      .main-headline {
+        font-size: 2.8em;
+        font-weight: bold;
+        color: #26334a;
+        text-align: center;
+        margin: 64px 0 24px 0;
+        letter-spacing: 1px;
+      }
+      .main-desc {
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 32px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 48px auto 48px auto;
+      }
+      /* Product card base style */
+      .product-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        padding: 32px 24px 24px 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        min-width: 0;
+      }
+      .product-card img {
+        width: 220px;
+        height: 140px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        background: #f5f5f5;
+      }
+      .product-card h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 1.5em;
+        color: #26334a;
+        font-weight: bold;
+        text-align: center;
+      }
+      .product-card p {
+        font-size: 1.08em;
+        color: #444;
+        text-align: center;
+        margin-bottom: 16px;
       }
       .product-features {
         margin-top: 0.5rem;
+        text-align: center;
       }
       .feature-tag {
         display: inline-block;
-        background: #e3f2fd;
-        color: #1976d2;
+        background: #7c4dff;
+        color: #fff;
         border-radius: 12px;
         padding: 0.2em 0.8em;
-        font-size: 0.9em;
+        font-size: 0.95em;
         margin-right: 0.3em;
         margin-bottom: 0.2em;
       }
-      .nav-brand h3 {
+      /* Grid placement for each row */
+      .product1 {
+        grid-row: 1;
+        grid-column: 2 / span 4;
+      }
+      .product2 {
+        grid-row: 2;
+        grid-column: 1 / span 3;
+      }
+      .product3 {
+        grid-row: 2;
+        grid-column: 4 / span 3;
+      }
+      .product4 {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+      }
+      .product5 {
+        grid-row: 3;
+        grid-column: 3 / span 2;
+      }
+      .product6 {
+        grid-row: 3;
+        grid-column: 5 / span 2;
+      }
+      @media (max-width:900px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 24px;
+        }
+        .product1, .product2, .product3, .product4, .product5, .product6 {
+          grid-column: 1 !important;
+          grid-row: auto !important;
+        }
+        .product-card img {
+          width: 90vw;
+          max-width: 220px;
+          height: auto;
+        }
+      }
+      /* Footer styles */
+      .footer-main {
+        background: #000;
+        color: #fff;
+        padding: 48px 0 0 0;
+        margin-top: 48px;
+      }
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: 2px solid #222;
+        padding-bottom: 24px;
+      }
+      .footer-col {
+        flex: 1 1 300px;
+        max-width: 400px;
+        padding: 0 24px;
+        text-align: left;
+      }
+      .footer-col h4 {
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
         margin: 0;
+      }
+      .footer-col ul li {
+        margin-bottom: 8px;
+      }
+      .footer-col a {
+        color: #43a047;
+        text-decoration: none;
         font-weight: bold;
       }
-      .nav-menu a.active {
-        font-weight: bold;
-        text-decoration: underline;
+      .footer-bottom {
+        text-align: center;
+        padding: 24px 0 32px 0;
+        color: #fff;
       }
-      .footer-center p {
-        margin: 0.2em 0;
+      .footer-bottom strong {
+        font-weight: bold;
+      }
+      @media (max-width:900px) {
+        .footer-row {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer-col {
+          max-width: 95vw;
+          text-align: center;
+          margin-bottom: 24px;
+        }
       }
     </style>
 </head>
-<body class="w3-light-grey">
-    <div class="page-container">
-        <!-- Header spans both columns -->
-        <header class="page-header w3-container w3-green w3-center w3-padding-32">
-            <div class="header-content">
-                <h1 class="w3-xxlarge">Our Digital Solutions</h1>
-                <img src="images/favicon-96x96.png" alt="Richardson Web Development Logo" class="header-logo">
-                <p class="header-subtitle w3-large">Crafting exceptional web experiences for modern businesses</p>
-            </div>
-        </header>
+<body>
+    <!-- Header -->
+    <header class="header-main">
+        <h1>Our Digital Solutions</h1>
+        <img src="images/favicon-96x96.png" alt="Richardson Web Development Logo" class="header-logo">
+        <p>Crafting exceptional web experiences for modern businesses</p>
+    </header>
 
-        <!-- Navigation -->
-        <nav class="w3-bar w3-blue w3-card w3-padding-small">
-            <div class="nav-brand w3-bar-item w3-mobile">
-                <h3 class="w3-margin-right">Richardson Web Dev</h3>
-            </div>
-            <div class="nav-menu w3-bar-item w3-right w3-mobile">
-                <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
-                <a href="contact-us.html" class="w3-bar-item w3-button w3-mobile">Contact</a>
-                <a href="about-us.html" class="w3-bar-item w3-button w3-mobile">About</a>
-                <a href="products.html" class="w3-bar-item w3-button w3-mobile w3-black">Products</a>
-                <a href="team.html" class="w3-bar-item w3-button w3-mobile">Team</a>
-                <a href="success.html" class="w3-bar-item w3-button w3-mobile">Success</a>
-            </div>
-        </nav>
+    <!-- Navigation -->
+    <nav class="nav-main">
+        <span style="font-weight:bold; margin-right:32px;">Richardson Web Dev</span>
+        <a href="index.html">Home</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="about-us.html">About</a>
+        <a href="products.html" class="active w3-black" aria-current="page">Products</a>
+        <a href="team.html">Team</a>
+        <a href="success.html">Success</a>
+    </nav>
 
-        <!-- Main Content Area -->
-        <main class="main-content w3-container w3-padding-32">
-            <section class="intro-section w3-center w3-animate-top">
-                <h2 class="w3-xlarge w3-text-blue">Transform Your Digital Presence</h2>
-                <p class="w3-large">At Richardson Web Development, we specialize in creating powerful digital solutions that drive business growth. Our comprehensive suite of products combines cutting-edge technology with user-centered design to deliver exceptional results for our clients.</p>
-            </section>
-
-            <!-- Products Grid Container -->
-            <section class="products-grid w3-row-padding w3-margin-top">
-                <!-- Featured Product - Row 1, spans 4 columns, centered -->
-                <div class="product-card featured-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/ecommerce_image.svg" alt="Custom E-commerce Platform">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-green">Custom E-commerce Platform</h3>
-                        <p>Complete online shopping solutions with advanced inventory management, secure payment processing, and mobile-responsive design. Built to scale with your business and integrate seamlessly with existing systems.</p>
-                        <div class="product-features">
-                            <span class="feature-tag"><i class="fa fa-mobile"></i> Mobile-First</span>
-                            <span class="feature-tag"><i class="fa fa-lock"></i> Secure Payments</span>
-                            <span class="feature-tag"><i class="fa fa-bar-chart"></i> Analytics</span>
-                        </div>
-                        <a href="#" class="w3-button w3-blue w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Row 2 Products - Each spans 3 columns -->
-                <div class="product-card standard-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/business_website_image.svg" alt="Professional Business Website">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-blue">Business Website Design</h3>
-                        <p>Professional websites that establish credibility and convert visitors into customers. Featuring modern design, fast loading speeds, and search engine optimization.</p>
-                        <div class="product-features">
-                            <span class="feature-tag"><i class="fa fa-search"></i> SEO Ready</span>
-                            <span class="feature-tag"><i class="fa fa-desktop"></i> Responsive</span>
-                        </div>
-                        <a href="#" class="w3-button w3-green w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-
-                <div class="product-card standard-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/web_app_image.svg" alt="Custom Web Application">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-orange">Web Applications</h3>
-                        <p>Interactive web applications tailored to your business processes. From customer portals to internal management systems, we build solutions that streamline operations.</p>
-                        <div class="product-features">
-                            <span class="feature-tag"><i class="fa fa-cogs"></i> Custom Built</span>
-                            <span class="feature-tag"><i class="fa fa-expand"></i> Scalable</span>
-                        </div>
-                        <a href="#" class="w3-button w3-orange w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-
-                <!-- Row 3 Products - Each spans 2 columns -->
-                <div class="product-card compact-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/maintenance_image.svg" alt="Website Maintenance">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-grey">Website Maintenance</h3>
-                        <p>Keep your website running smoothly with our comprehensive maintenance services including updates, backups, and security monitoring.</p>
-                        <a href="#" class="w3-button w3-grey w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-
-                <div class="product-card compact-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/seo_services_image.svg" alt="SEO Optimization Services">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-red">SEO Optimization</h3>
-                        <p>Improve your search engine rankings and drive organic traffic with our proven SEO strategies and content optimization techniques.</p>
-                        <a href="#" class="w3-button w3-red w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-
-                <div class="product-card compact-product w3-card w3-white w3-hover-shadow w3-col l4 m6 s12 w3-margin-bottom w3-center">
-                    <div class="product-image">
-                        <img src="images/consulting_image.svg" alt="Digital Strategy Consulting">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="w3-text-blue">Digital Consulting</h3>
-                        <p>Strategic guidance to help you navigate the digital landscape and make informed decisions about your online presence and technology investments.</p>
-                        <a href="#" class="w3-button w3-blue w3-margin-top"><i class="fa fa-info-circle"></i> Learn More</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- W3.CSS Table Example -->
-            <section class="w3-margin-top">
-                <h3 class="w3-text-blue">Feature Comparison</h3>
-                <div class="w3-responsive">
-                    <table class="w3-table w3-striped w3-bordered w3-white">
-                        <tr>
-                            <th>Product</th>
-                            <th>Mobile</th>
-                            <th>SEO</th>
-                            <th>Customizable</th>
-                        </tr>
-                        <tr>
-                            <td>Custom E-commerce</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td>Business Website</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Limited</td>
-                        </tr>
-                        <tr>
-                            <td>Web Applications</td>
-                            <td>Yes</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <!-- W3.CSS Form Example -->
-            <section class="w3-margin-top w3-center">
-                <h3 class="w3-text-green">Request More Info</h3>
-                <form class="w3-container w3-card-4 w3-white w3-padding-16 w3-margin w3-display-inline-block" style="max-width:400px;">
-                    <label class="w3-text-blue"><b>Name</b></label>
-                    <input class="w3-input w3-border w3-margin-bottom" type="text" name="name" required>
-                    <label class="w3-text-blue"><b>Email</b></label>
-                    <input class="w3-input w3-border w3-margin-bottom" type="email" name="email" required>
-                    <label class="w3-text-blue"><b>Message</b></label>
-                    <textarea class="w3-input w3-border w3-margin-bottom" name="message" rows="3" required></textarea>
-                    <button class="w3-button w3-blue w3-margin-top" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
-                </form>
-            </section>
-        </main>
-
-        <!-- Footer spans both columns -->
-        <footer class="page-footer w3-container w3-black w3-center w3-padding-32">
-            <div class="footer-content w3-row-padding w3-center">
-                <div class="footer-section w3-col l4 m6 s12">
-                    <h4 class="w3-text-green">Richardson Web Development</h4>
-                    <p>Creating exceptional digital experiences since 2025</p>
-                </div>
-                <div class="footer-section w3-col l4 m6 s12">
-                    <h4 class="w3-text-blue">Services</h4>
-                    <ul class="w3-ul w3-white w3-hoverable w3-card-4 w3-center">
-                        <li>Web Design</li>
-                        <li>E-commerce</li>
-                        <li>Web Applications</li>
-                        <li>SEO Services</li>
-                    </ul>
-                </div>
-                <div class="footer-section w3-col l4 m12 s12">
-                    <h4 class="w3-text-orange">Contact</h4>
-                    <p><a href="mailto:e1436803@dallascollege.edu" class="w3-text-blue"><i class="fa fa-envelope"></i> Email the Webmaster</a></p>
+    <!-- Main Content -->
+    <main>
+        <div class="main-headline">
+            Transform Your Digital Presence
+        </div>
+        <div class="main-desc">
+            At Richardson Web Development, we specialize in creating powerful digital solutions that drive business growth. Our comprehensive suite of products combines cutting-edge technology with user-centered design to deliver exceptional results for our clients.
+        </div>
+        <section class="products-grid">
+            <!-- Row 1: One featured product centered, spanning 4 columns -->
+            <div class="product-card product1">
+                <img src="images/ecommerce_image.svg" alt="Custom E-commerce Platform">
+                <h3>Custom E-commerce Platform</h3>
+                <p>Complete online shopping solutions with advanced inventory management, secure payment processing, and mobile-responsive design. Built to scale with your business and integrate seamlessly with existing systems.</p>
+                <div class="product-features">
+                  <span class="feature-tag">MOBILE-FIRST</span>
+                  <span class="feature-tag">SECURE PAYMENTS</span>
+                  <span class="feature-tag">ANALYTICS</span>
                 </div>
             </div>
-            <div class="footer-center w3-margin-top">
-                <p>&copy; 2025 Myron Richardson.</p>
-                <p><strong>Disclaimer:</strong> This content is for informational purposes only.</p>
-                <p>All rights reserved</p>
+            <!-- Row 2: Two products, each spanning 3 columns -->
+            <div class="product-card product2">
+                <img src="images/business_website_image.svg" alt="Professional Business Website">
+                <h3>Business Website Design</h3>
+                <p>Professional websites that establish credibility and convert visitors into customers. Featuring modern design, fast loading speeds, and search engine optimization.</p>
+                <div class="product-features">
+                  <span class="feature-tag">SEO READY</span>
+                  <span class="feature-tag">RESPONSIVE</span>
+                </div>
             </div>
-        </footer>
-    </div>
+            <div class="product-card product3">
+                <img src="images/web_app_image.svg" alt="Custom Web Application">
+                <h3>Web Applications</h3>
+                <p>Interactive web applications tailored to your business processes. From customer portals to internal management systems, we build solutions that streamline operations.</p>
+                <div class="product-features">
+                  <span class="feature-tag">CUSTOM BUILT</span>
+                  <span class="feature-tag">SCALABLE</span>
+                </div>
+            </div>
+            <!-- Row 3: Three products, each spanning 2 columns -->
+            <div class="product-card product4">
+                <img src="images/maintenance_image.svg" alt="Website Maintenance">
+                <h3>Website Maintenance</h3>
+                <p>Keep your website running smoothly with our comprehensive maintenance services including updates, backups, and security monitoring.</p>
+            </div>
+            <div class="product-card product5">
+                <img src="images/seo_services_image.svg" alt="SEO Optimization Services">
+                <h3>SEO Optimization</h3>
+                <p>Improve your search engine rankings and drive organic traffic with our proven SEO strategies and content optimization techniques.</p>
+            </div>
+            <div class="product-card product6">
+                <img src="images/consulting_image.svg" alt="Digital Strategy Consulting">
+                <h3>Digital Consulting</h3>
+                <p>Strategic guidance to help you navigate the digital landscape and make informed decisions about your online presence and technology investments.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Richardson Web Development</h4>
+                <p>Creating exceptional digital experiences<br>since 2025</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li>Web Design</li>
+                    <li>E-commerce</li>
+                    <li>Web Applications</li>
+                    <li>SEO Services</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><a href="mailto:e1436803@dallascollege.edu">Email the Webmaster</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Myron Richardson.</p>
+            <p><strong>Disclaimer:</strong> This content is for informational purposes only.</p>
+            <p>All rights reserved</p>
+        </div>
+           </footer>
 </body>
+</html>
