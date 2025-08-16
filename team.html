@@ -1,220 +1,331 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Myron Richardson">
-  <meta name="description" content="Learn more about Myron Richardson's background, values, and goals in web development. This page includes content assisted by AI tools.">
-  <meta name="generator" content="AI-assisted content">
-  <title>About - Myron Richardson</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description"
+    content="Meet our talented team of web developers and designers bringing innovation to digital solutions. This page includes content assisted by AI tools.">
+  <title>Our Team - Myron Richardson Web Development</title>
   <link rel="icon" href="images/favicon-96x96.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Base styles and theme */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --card-bg: #f0f0f0;
+      --accent: #4CAF50;
+      --modal-bg: rgba(0, 0, 0, 0.6);
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eeeeee;
+      --card-bg: #1e1e1e;
+      --modal-bg: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header .logo img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+    }
+
+    /* ----------------------------
+       Part II: Updated Navigation
+    ----------------------------- */
+    nav.topnav {
+      background: var(--card-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav.topnav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+
+    nav.topnav a:hover {
+      color: var(--accent);
+    }
+
+    /* ----------------------------
+       Team & Page Sections
+    ----------------------------- */
+    .main-content {
+      padding: 2rem;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .team-member {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 260px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .team-member figcaption {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .bio {
+      font-size: 0.9rem;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .team-values {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    /* ----------------------------
+       Part III: Footer Flex Layout
+    ----------------------------- */
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer-column ul,
+    .footer-column p {
+      margin: 0.5rem 0;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: var(--modal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: var(--bg-color);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  </style>
 </head>
-<body class="w3-light-grey">
+
+<body>
   <!-- Theme Toggle Button -->
-  <div id="theme-toggle-container" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; cursor: pointer; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
-    <span id="theme-toggle-icon" title="Toggle theme" style="font-size: 1.5rem;">🌓</span>
-  </div>
-
-  <!-- Header -->
-  <header class="w3-container w3-green w3-center w3-padding-32">
-    <h1 class="w3-xxlarge">Welcome to My About Page</h1>
+<div id="theme-toggle-container" style="position: fixed; top: 5rem; right: 1rem; z-index: 1000; cursor: pointer; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+  <span id="theme-toggle-icon" title="Toggle theme" style="font-size: 1.5rem;">🌓</span>
+</div>
+  <header>
+    <h1>Meet Our Team<br>Richardson Web Development</h1>
     <div class="logo">
-      <img src="images/favicon-96x96.png" alt="Myron Richardson's favicon" style="width:80px;">
+      <img src="images/favicon-96x96.png" alt="Myron Richardson's favicon">
     </div>
+    <p class="header-description">Our diverse team of professionals brings together creativity, technical expertise, and
+      passion for innovation.</p>
   </header>
-
-  <!-- Navigation -->
-  <nav class="w3-bar w3-blue w3-card w3-padding-small w3-center">
-    <a href="index.html" class="w3-bar-item w3-button">Home</a>
-    <a href="contact-us.html" class="w3-bar-item w3-button">Contact</a>
-    <a href="about-us.html" class="w3-bar-item w3-button w3-black" aria-current="page">About Me</a>
-    <a href="products.html" class="w3-bar-item w3-button">Products</a>
-    <a href="team.html" class="w3-bar-item w3-button">Team</a>
+  <nav class="topnav">
+    <div class="nav-left">
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="contact-us.html" class="w3-bar-item w3-button">Contact</a>
+  <a href="about-us.html" class="w3-bar-item w3-button w3-black" aria-current="page">About Me</a>
+  <a href="products.html" class="w3-bar-item w3-button">Products</a>
+  <a href="team.html" class="w3-bar-item w3-button">Team</a>
+      <a href="success.html">Success</a>
+    </div>
+    <div class="nav-right">
+      <a href="signin.html">Sign In</a>
+    </div>
   </nav>
 
-  <!-- Main Layout: Sidebar + Main Content -->
-  <div class="w3-content w3-margin-top" style="max-width:1200px;">
-    <div class="w3-row-padding">
-      <!-- Sidebar / Table of Contents -->
-      <aside class="w3-third w3-card w3-light-grey w3-padding-16 w3-margin-bottom">
-        <div class="w3-container">
-          <h3 class="w3-text-blue">Table of Contents</h3>
-          <ul class="w3-ul">
-            <li><a href="#my-story">My Story</a></li>
-            <li><a href="#values-goals">Values and Goals</a></li>
-            <li><a href="#what-drives-me">What Drives Me</a></li>
-            <li><a href="#skills-timeline">Skills Timeline</a></li>
-          </ul>
+  <main class="main-content">
+    <section class="team-intro">
+      <h2>Building Digital Excellence Together</h2>
+      <p>Our collaborative approach combines technical expertise with creative vision.</p>
+    </section>
+
+    <section class="team">
+      <div class="team-container">
+        <h2>Our Team Members</h2>
+        <!-- Team Member Cards -->
+        <div class="team-member" onclick="openModal('Myron Richardson', 'CEO & Lead Developer', 'Myron is the visionary founder...')">
+          <figure>
+            <img src="images/20250125_225822.jpg" alt="Myron Richardson">
+            <figcaption>Myron Richardson</figcaption>
+          </figure>
+          <p class="bio">CEO & Lead Developer</p>
+          <p>Myron is the visionary founder and lead developer, driving innovation and excellence in every project.</p>
+          <div class="social-icons"><a href="#">💼</a></div>
         </div>
-      </aside>
 
-      <!-- Main Content -->
-      <main class="w3-twothird w3-card w3-white w3-padding-32">
-        <section class="intro-section w3-container">
-          <h2 class="w3-text-green">About Me</h2>
-          <p>This section provides more information about Myron Richardson and the inspiration behind the web development journey.</p>
-        </section>
-
-        <section id="my-story" class="w3-container w3-margin-top">
-          <h2 class="w3-text-blue">My Story</h2>
-          <figure class="w3-right w3-margin-left w3-margin-bottom">
-            <a href="images/20250125_225822.jpg" target="_blank">
-              <img 
-                src="images/20250125_225822.jpg" 
-                alt="Myron Richardson - Personal photo" 
-                class="w3-image w3-card w3-round"
-                style="max-width:200px; height:200px; object-fit:cover;"
-              >
-            </a>
-            <figcaption class="w3-small">The journey that shaped who I am today</figcaption>
+        <div class="team-member" onclick="openModal('Keith O\'brain', 'UI/UX Designer', 'Keith is our talented UI/UX designer...')">
+          <figure>
+            <img src="images/1000004822.jpg" alt="Keith O'brain">
+            <figcaption>Keith O'brain</figcaption>
           </figure>
-          <p>
-            Growing up in a family of nine - five boys, two sisters, our mother, and our grandmother - created the foundation for everything I would become. Raised in the church with unwavering faith, our family understood that putting God first wasn't just a belief, but a way of life that guided every decision. My mother and grandmother were pillars of strength who insisted on education and instilled in us an unshakeable belief in ourselves and our potential.
-          </p>
-          <p>
-            In our household, support wasn't just given - it was woven into the fabric of daily life. With so many siblings, we learned early that success meant lifting each other up, sharing resources, and celebrating each other's achievements. This foundation of faith, education, and mutual support became the bedrock that would carry me through every challenge and opportunity that followed.
-          </p>
-          <p>
-            Expanding on this strong foundation, my path to web development has been shaped by pivotal moments that transformed curiosity into passion. One defining milestone was the first time I successfully took apart an old black and white TV at age nine because my mom didn't have money to buy a new one, so I tried to fix it. The satisfaction of understanding how each component worked together sparked a lifelong fascination with systems and structure that now drives my approach to coding architecture.
-          </p>
-          <p>
-            During high school, while balancing four sports, I discovered that the same mental discipline required to perfect a free throw or execute a precise play could be applied to mastering complex concepts. The countless hours spent on running plays over and over again taught me to break down problems into manageable components, a skill that proves invaluable when debugging code or planning website functionality.
-          </p>
-          <p>
-            A particularly transformative experience came during my senior year when I was invited to join a rap group. Combining my drawing skills with music technology opened my eyes to the intersection of creativity in music and digital innovation. This project became the bridge between my artistic background and my future in web development, showing me how visual design and technical implementation could work harmoniously together.
-          </p>
-          <p>
-            The decision to pursue web development in college wasn't just about career prospects; it was about finding a field that honored all aspects of my background. Web development allows me to channel the analytical thinking from mechanical exploration, the creative expression from drawing, the collaborative spirit from team sports, and the problem-solving persistence that has defined my approach to every challenge I've encountered.
-          </p>
-        </section>
+          <p class="bio">UI/UX Designer</p>
+          <p>Keith specializes in creating intuitive user experiences and stunning visual designs.</p>
+          <div class="social-icons"><a href="#">🎨</a></div>
+        </div>
 
-        <section id="values-goals" class="w3-container w3-margin-top">
-          <h2 class="w3-text-green">Values and Goals</h2>
-          <figure class="w3-left w3-margin-right w3-margin-bottom">
-            <a href="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400" target="_blank">
-              <img 
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=200&h=200&fit=crop" 
-                alt="Group of African American web developers building with purpose and accessibility in mind" 
-                class="w3-image w3-card w3-round"
-                style="max-width:200px; height:200px; object-fit:cover;"
-              >
-            </a>
-            <figcaption class="w3-small">Building with purpose and accessibility in mind</figcaption>
+        <div class="team-member" onclick="openModal('Ryan O\'neal', 'Backend Developer', 'Ryan specializes in backend development...')">
+          <figure>
+            <img src="images/1000004835.jpg" alt="Larry Moore">
+            <figcaption>Larry Moore</figcaption>
           </figure>
-          <p>
-            My core values in web development center around creating meaningful, accessible experiences for all users. Having learned the importance of teamwork through sports, I believe that websites should work for everyone, regardless of their abilities or the devices they use. This commitment to accessibility isn't just about following guidelines; it's about ensuring that the digital spaces I create welcome and serve every visitor.
-          </p>
-          <p>
-            User-centric design drives every decision I make in development. Just as I learned to pay attention to detail in my drawings, I focus on understanding the needs, frustrations, and goals of the people who will interact with the websites I build. This means conducting thorough research, testing with real users, and continuously iterating based on feedback rather than assumptions.
-          </p>
-          <p>
-            My passion for learning new technologies stems from the same curiosity that once drove me to dismantle radios and televisions. The web development landscape evolves rapidly, and I embrace this constant change as an opportunity for growth. Whether it's mastering a new JavaScript framework, exploring emerging CSS techniques, or understanding the latest accessibility standards, I approach each learning opportunity with the same enthusiasm I once brought to understanding mechanical systems.
-          </p>
-          <p>
-            Collaboration and communication remain central to my approach, reflecting lessons learned on sports teams. I believe the best websites emerge from diverse perspectives working together, whether that's collaborating with designers, coordinating with back-end developers, or gathering insights from content creators and stakeholders. Clear communication and mutual respect create the foundation for exceptional digital experiences.
-          </p>
-        </section>
+          <p class="bio">Backend Developer</p>
+          <p>Larry specializes in backend development, ensuring robust and scalable server-side solutions.</p>
+          <div class="social-icons"><a href="#">⚙️</a></div>
+        </div>
+      </div>
+    </section>
 
-        <section id="what-drives-me" class="w3-container w3-margin-top">
-          <h2 class="w3-text-blue">What Drives Me</h2>
-          <figure class="w3-right w3-margin-left w3-margin-bottom">
-            <a href="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400" target="_blank">
-              <img 
-                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=200&h=200&fit=crop" 
-                alt="Web developer drawing interactive app design on laptop" 
-                class="w3-image w3-card w3-round"
-                style="max-width:200px; height:200px; object-fit:cover;"
-              >
-            </a>
-            <figcaption class="w3-small">The drive to create and innovate</figcaption>
-          </figure>
-          <p>
-            What truly drives me in web development is the opportunity to solve real problems for real people. Every website I build has the potential to make someone's day easier, help a business connect with its audience, or provide access to information that can change lives. This sense of purpose transforms coding from a technical exercise into a meaningful contribution to the digital world.
-          </p>
-          <p>
-            The creative problem-solving aspect of web development resonates deeply with my background in both art and mechanical exploration. Each project presents unique challenges that require innovative solutions, whether it's optimizing performance for mobile users, creating intuitive navigation for complex content, or finding elegant ways to present data visually. The satisfaction of crafting clean, efficient code that produces beautiful, functional results mirrors the joy I once felt completing a detailed drawing or successfully reassembling a complex device.
-          </p>
-          <p>
-            I'm particularly motivated by the democratizing power of the web. Unlike traditional media or physical products that require significant resources to distribute, a well-built website can reach audiences worldwide, providing equal access to information, services, and opportunities. This responsibility to create inclusive, accessible digital experiences drives me to continuously improve my skills and stay current with best practices.
-          </p>
-          <p>
-            Having two sons and three grandchildren has also given me an even deeper reason to keep pushing myself and to show them that no matter what age you are, you can still strive to grow in so many ways in life. There's so much out there to achieve, and I want to be a living example that learning never stops and dreams have no expiration date. Watching their curiosity and eagerness to explore the world reminds me daily of the importance of maintaining that same wonder and determination in my own journey.
-          </p>
-          <p>
-            Looking ahead, my goal is to contribute to web development projects that prioritize sustainability, accessibility, and user empowerment. I want to be part of creating a more inclusive digital landscape where technology serves humanity's best interests, where beautiful design meets functional excellence, and where every user feels valued and understood through thoughtful, purposeful web experiences.
-          </p>
-        </section>
-
-        <!-- New Skills Timeline Section with Table -->
-        <section id="skills-timeline" class="w3-container w3-margin-top">
-          <h2 class="w3-text-green">Skills Timeline</h2>
-          <p>Here's a timeline of my key learning milestones and skill development:</p>
-          
-          <div class="w3-responsive w3-margin-top">
-            <table class="w3-table w3-striped w3-border">
-              <thead>
-                <tr class="w3-blue">
-                  <th>Year/Age</th>
-                  <th>Milestone</th>
-                  <th>Skills Gained</th>
-                  <th>Impact</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Age 9</td>
-                  <td>First TV Repair Attempt</td>
-                  <td>Problem Analysis, Curiosity</td>
-                  <td>Sparked interest in understanding systems</td>
-                </tr>
-                <tr>
-                  <td>High School</td>
-                  <td>4-Sport Athlete</td>
-                  <td>Discipline, Teamwork, Time Management</td>
-                  <td>Learned to balance multiple priorities</td>
-                </tr>
-                <tr>
-                  <td>Senior Year</td>
-                  <td>Rap Group Experience</td>
-                  <td>Creative Collaboration, Digital Art</td>
-                  <td>Bridge between creativity and technology</td>
-                </tr>
-                <tr>
-                  <td>College</td>
-                  <td>Web Development Studies</td>
-                  <td>HTML, CSS, JavaScript Fundamentals</td>
-                  <td>Foundation for professional development</td>
-                </tr>
-                <tr>
-                  <td>Present</td>
-                  <td>Continuous Learning</td>
-                  <td>Modern Frameworks, Accessibility, UX</td>
-                  <td>Building inclusive digital experiences</td>
-                </tr>
-                <tr>
-                  <td>Future Goal</td>
-                  <td>Senior Developer Role</td>
-                  <td>Leadership, Mentoring, Architecture</td>
-                  <td>Contributing to sustainable web practices</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </main>
+    <section class="team-values">
+      <h2>Our Collaborative Approach</h2>
+      <p>Just as Myron learned the value of teamwork through sports, our entire team operates with the same principles.
+      </p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>External Links</h3>
+      <ul>
+        <li><a href="https://www.dallascollege.edu/" target="_blank">Dallas College</a></li>
+        <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
+        <li><a href="https://www.microsoft.com/ai" target="_blank">Microsoft AI</a></li>
+      </ul>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-black w3-center w3-padding-32">
-    <div>
-      <p>&copy; 2025 Myron Richardson.</p>
-      <p><strong>Disclaimer:</strong> This content is for informational purposes only.</p>
-      <p>All rights reserved</p>
+    <div class="footer-column center">
+      <p>&copy; <span id="year"></span> Myron Richardson</p>
+      <p><a href="mailto:e1436803@dallascollege.edu">Email Webmaster</a></p>
+    </div>
+
+    <div class="footer-column footer-nav">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About ME</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        <li><a href="success.html">Success</a></li>
+      </ul>
     </div>
   </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="theme-toggle.js"></script>
 </body>
 </html>
